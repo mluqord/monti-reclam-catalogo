@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de Merchandising | Monti Reclam</title>
+  <meta name="description" content="Catálogo digital minimalista de merchandising corporativo de Monti Reclam. Explora productos personalizados y solicita una cotización en línea." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="hero__tag">Colección 2024</p>
+      <h1>Merchandising que conecta con tus clientes</h1>
+      <p class="hero__text">
+        Descubre una selección curada de productos promocionales personalizables para impulsar tu marca. Visualiza precios de referencia y solicita una cotización ajustada en cuestión de minutos.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#cotizador">Solicitar cotización</a>
+        <a class="btn btn--ghost" href="#productos">Ver catálogo</a>
+      </div>
+    </div>
+    <div class="hero__image" aria-hidden="true"></div>
+  </header>
+
+  <main>
+    <section id="resumen" class="section section--light">
+      <div class="section__header">
+        <h2>¿Por qué elegir Monti Reclam?</h2>
+        <p>Trabajamos contigo para que cada pieza refleje los valores y la personalidad de tu marca.</p>
+      </div>
+      <div class="highlights">
+        <article class="highlight">
+          <h3>Selección curada</h3>
+          <p>Proponemos los productos con mejor recepción y calidad para que tu inversión genere impacto.</p>
+        </article>
+        <article class="highlight">
+          <h3>Precios transparentes</h3>
+          <p>Consulta rangos estimados al instante y recibe una cotización personalizada con cantidades reales.</p>
+        </article>
+        <article class="highlight">
+          <h3>Acompañamiento experto</h3>
+          <p>Te asesoramos en materiales, acabados y empaques para lograr una experiencia memorable.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="productos" class="section">
+      <div class="section__header">
+        <h2>Catálogo interactivo</h2>
+        <p>Filtra por categoría o busca directamente el artículo que necesitas.</p>
+      </div>
+      <div class="filters" role="search">
+        <div class="field">
+          <label for="search" class="field__label">Buscar producto</label>
+          <input type="search" id="search" placeholder="Ej. termo, libreta, textil" />
+        </div>
+        <div class="field">
+          <label for="category" class="field__label">Categoría</label>
+          <select id="category">
+            <option value="">Todas</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="price" class="field__label">Rango de precio</label>
+          <select id="price">
+            <option value="">Todos</option>
+            <option value="low">Hasta $150 MXN</option>
+            <option value="medium">$150 - $300 MXN</option>
+            <option value="high">Más de $300 MXN</option>
+          </select>
+        </div>
+      </div>
+      <div id="product-grid" class="product-grid" aria-live="polite"></div>
+      <div class="section__footer">
+        <p class="muted">¿Necesitas una propuesta integral para un evento o campaña? Estamos listos para ayudarte.</p>
+        <a class="btn btn--primary" href="#cotizador">Solicita una cotización personalizada</a>
+      </div>
+    </section>
+
+    <section id="cotizador" class="section section--accent">
+      <div class="section__header">
+        <h2>Solicita tu cotización personalizada</h2>
+        <p>Cuéntanos sobre tu proyecto y nos pondremos en contacto en menos de 24 horas.</p>
+      </div>
+      <form class="quote-form" aria-label="Formulario de cotización">
+        <div class="form-grid">
+          <div class="field">
+            <label for="company" class="field__label">Empresa</label>
+            <input type="text" id="company" name="company" placeholder="Nombre de tu empresa" required />
+          </div>
+          <div class="field">
+            <label for="name" class="field__label">Contacto</label>
+            <input type="text" id="name" name="name" placeholder="Nombre completo" required />
+          </div>
+          <div class="field">
+            <label for="email" class="field__label">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="nombre@empresa.com" required />
+          </div>
+          <div class="field">
+            <label for="phone" class="field__label">Teléfono</label>
+            <input type="tel" id="phone" name="phone" placeholder="(55) 1234 5678" />
+          </div>
+          <div class="field">
+            <label for="product-interest" class="field__label">Producto de interés</label>
+            <input type="text" id="product-interest" name="product_interest" placeholder="Artículo o categoría" />
+          </div>
+          <div class="field">
+            <label for="quantity" class="field__label">Cantidad estimada</label>
+            <input type="number" id="quantity" name="quantity" min="10" step="10" placeholder="Ej. 100" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="details" class="field__label">Detalles adicionales</label>
+          <textarea id="details" name="details" rows="4" placeholder="Indícanos colores, fecha límite, empaques especiales..."></textarea>
+        </div>
+        <button type="submit" class="btn btn--dark">Enviar solicitud</button>
+        <p class="form-feedback" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <span class="logo">Monti Reclam</span>
+      <p>Merchandising diseñado para dejar huella.</p>
+    </div>
+    <div class="footer__contact">
+      <a href="mailto:hola@montireclam.com">hola@montireclam.com</a>
+      <a href="tel:+525512345678">+52 55 1234 5678</a>
+    </div>
+  </footer>
+
+  <template id="product-card-template">
+    <article class="product-card">
+      <div class="product-card__image" role="presentation"></div>
+      <div class="product-card__content">
+        <div class="product-card__header">
+          <h3 class="product-card__title"></h3>
+          <p class="product-card__category"></p>
+        </div>
+        <p class="product-card__description"></p>
+        <div class="product-card__footer">
+          <p class="product-card__price"></p>
+          <button type="button" class="btn btn--ghost product-card__cta">Solicitar</button>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="assets/js/app.js" type="module"></script>
+</body>
+</html>
